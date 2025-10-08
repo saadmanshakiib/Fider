@@ -1,0 +1,83 @@
+.login-page {
+  height: 100vh;
+  width: 100%;
+  background-image: url('/src/images/login.png');
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.input-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  width: 330px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.input-container input {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  transition: 0.3s ease;
+}
+
+.input-container input:focus {
+  background: #fff;
+  box-shadow: 0 0 8px rgba(255, 111, 97, 0.7);
+}
+
+.input-container button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff6f61;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.input-container button:hover {
+  background-color: #ff3b2f;
+  transform: scale(1.03);
+}
+
+.newUser {
+  font-size: 14px;
+  color: white;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+@media (max-width: 480px) {
+  .input-container {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  .input-container input,
+  .input-container button {
+    font-size: 15px;
+  }
+}

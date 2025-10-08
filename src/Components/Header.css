@@ -1,0 +1,57 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap');
+
+/* Header Container */
+.header {
+  background-color: #ff6b6b;
+  color: #fff;
+  padding: 15px 30px;
+  font-family: 'Roboto', sans-serif; /* body font */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif; /* stylish header font */
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* Navigation Bar */
+.Nav {
+  background-color: #fff;
+  width: 100%;
+}
+
+.navLinks {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  gap: 30px;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #ff6b6b;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.navLinks li a:hover {
+  background-color: #ff6b6b;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

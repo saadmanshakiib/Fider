@@ -1,0 +1,38 @@
+/* Footer Container */
+.footer {
+  background-color: #ff6b6b;   /* Attractive background color */
+  color: #fff;                 /* White text */
+  padding: 20px 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif; /* Modern font */
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.1); /* Subtle top shadow */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Footer Paragraph */
+.footerP {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Hover effect on email */
+.footerP:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footerP {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerP {
+    font-size: 0.9rem;
+  }
+}
