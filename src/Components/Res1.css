@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #fff7f0;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #fff, #ffe9d6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    box-sizing: border-box;
+}.heading {
+     color:#ff513d;
+     font-size: 32px;
+     font-weight: 700;
+     margin-bottom: 40px;
+     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+     text-align: center;
+ }
+
+
+/* Optional: mimic hover effect on heading when hovering over it */
+.heading:hover {
+    color: #ff513d; /* same as button hover */
+}
+
+
+/* Grid Layout */
+.snacks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    width: 90%;
+    max-width: 1300px;
+}
+
+/* Card */
+.snacks1,
+.snacks2,
+.snacks3 {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.snacks1:hover,
+.snacks2:hover,
+.snacks3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.snacks1_pic,
+.snacks2_pic,
+.snacks3_pic {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    height: 220px;
+}
+
+/* Text */
+.snacks_name,
+.snacks2_name,
+.snacks3_name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #222;
+    margin: 15px 0;
+}
+
+.des1,
+.des2,
+.des3 {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Control section - all in one line */
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.decrease,
+.increase-btn {
+    background-color: #ff725e;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.decrease:hover,
+.increase-btn:hover {
+    background-color: #ff513d;
+}
+
+.amount {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    min-width: 20px;
+    text-align: center;
+}
+
+.price {
+    font-weight: 600;
+    color: #333;
+    margin-left: 10px;
+}
