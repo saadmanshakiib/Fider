@@ -11,6 +11,9 @@ const Res1 = () => {
     const [pizzaAmount,setPizzaAmount]=useState(0);
     const [pizzaAmount2,setPizzaAmount2]=useState(0);
     const [pizzaPrice2,setPizzaPrice2]=useState(0);
+
+    const totalPrice = burgerPrice + pizzaPrice + pizzaPrice2;
+
 ///////burger
     const increaseAmount=()=>{
             setAmount(amount+1);
@@ -22,8 +25,11 @@ const Res1 = () => {
             setAmount(0);
             setBurgerPrice(0);
         }
-        else setBurgerPrice(burgerPrice-230);
-    }
+        else {
+            setBurgerPrice(burgerPrice - 230);
+        }
+        }
+
 //////////pizza1
         const increasePizzaAmount=()=>{
         setPizzaAmount(pizzaAmount+1);
@@ -45,13 +51,12 @@ const Res1 = () => {
         setPizzaPrice2(pizzaPrice2 + 380);
     }
 
-    const decreasePizzaAmount2=()=>{
-        setPizzaAmount2(pizzaAmount2-1);
-        if(pizzaAmount2<=0){
+    const decreasePizzaAmount2=()=> {
+        setPizzaAmount2(pizzaAmount2 - 1);
+        if (pizzaAmount2 <= 0) {
             setPizzaAmount2(0);
             setPizzaPrice2(0);
-        }
-        else setPizzaPrice2(pizzaPrice2-380);
+        } else setPizzaPrice2(pizzaPrice2 - 380);
     }
 
 
@@ -96,6 +101,9 @@ const Res1 = () => {
                         <p className='pizzaPrice2'>Price <span>{pizzaPrice2}</span> BDT</p>
                     </div>
                 </div>
+            </div>
+            <div className='cart'>
+                <button className="cart-btn">Cart <span>{totalPrice}</span></button>
             </div>
 
         </div>
