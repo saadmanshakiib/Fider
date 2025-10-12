@@ -13,6 +13,9 @@ import Res3 from "./Components/Res3.jsx";
 import Res4 from "./Components/Res4.jsx";
 import Res5 from "./Components/Res5.jsx";
 import Res6 from "./Components/Res6.jsx";
+import Bkash from "./Components/Bkash.jsx";
+import Choose from "./Components/Choose.jsx";
+import Nagad from "./Components/Nagad.jsx";
 
 const Routee=()=>{
     return(
@@ -41,6 +44,9 @@ const Routee=()=>{
                     <Route path="/Res4" element={<Res4/>}/>
                     <Route path="/Res6" element={<Res6/>}/>
                     <Route path="/Res5" element={<Res5/>}/>
+                    <Route path="/choose" element={<Choose/>}/>
+                    <Route path="/bkash" element={<Bkash/>}/>
+                    <Route path="/nagad" element={<Nagad/>}/>
 
 
                 </Routes>

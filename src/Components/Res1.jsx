@@ -2,6 +2,8 @@
 import './Res1.css'
 
 import {useState} from "react";
+import {useNavigate} from "react-router-dom";
+import choose from "./Choose.jsx";
 
 const Res1 = () => {
 
@@ -11,6 +13,8 @@ const Res1 = () => {
     const [pizzaAmount,setPizzaAmount]=useState(0);
     const [pizzaAmount2,setPizzaAmount2]=useState(0);
     const [pizzaPrice2,setPizzaPrice2]=useState(0);
+
+    const navigate = useNavigate();
 
     const totalPrice = burgerPrice + pizzaPrice + pizzaPrice2;
 
@@ -103,7 +107,16 @@ const Res1 = () => {
                 </div>
             </div>
             <div className='cart'>
-                <button className="cart-btn">Cart <span>{totalPrice}</span></button>
+                <button className="cart-btn" onClick={
+                    ()=>{
+                        if(totalPrice !== 0){
+                        navigate('/choose',{state : {totalPrice}});
+                    }
+                    else{
+                        alert("Empty Cart");
+                        return;
+                    }
+                }}>Cart <span>{totalPrice}</span></button>
             </div>
 
         </div>
