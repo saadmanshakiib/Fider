@@ -1,6 +1,6 @@
 import {useRef} from "react";
 import {useLocation, useNavigate} from "react-router-dom";
-//import './Nagad.css'
+import './Nagad.css'
 
 const Nagad=()=>{
     const numRef = useRef(null);
@@ -24,6 +24,7 @@ const Nagad=()=>{
 
             const result = await number.text();
 
+
             if(result.includes("No Nagad User Found")){
                 alert('No Matched Account Found');
             }
@@ -32,10 +33,11 @@ const Nagad=()=>{
                     method: "GET",
                     headers: {"Content-Type": "application/json"}
                 });
-
                 const balance = await balanceCheck.json();
                 if(balance < totalPrice){
                     alert("Low Balance");
+                    numRef.current.value = "";
+                    passRef.current.value = "";
                 }
                 else{
                     alert("Payment Confirmed of tk "+totalPrice);
@@ -50,22 +52,25 @@ const Nagad=()=>{
 
 
     return(
-        <div className="payment">
-            <h1 className="heading1">Payment Page</h1>
-            <div className="inputs">
+        <div className="nagad_payment">
+            <h1 className="heading2">Nagad Payment</h1>
+            <div className="nagadinputs">
                 <input
                     type="text"
                     placeholder="Enter Nagad Mobile Number"
                     ref={numRef}
                 />
                 <input
-                    type='password'
+                    type="password"
                     placeholder="Enter Nagad Password"
                     ref={passRef}
                 />
-                <button type ='submit' className="button" onClick={handleSubmit}>Submit</button>
+                <button type="submit" className="button2" onClick={handleSubmit}>
+                    Submit
+                </button>
             </div>
         </div>
+
     )
 }
 export default Nagad;

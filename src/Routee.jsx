@@ -49,6 +49,8 @@ const Routee=()=>{
                     <Route path="/nagad" element={<Nagad/>}/>
 
 
+
+
                 </Routes>
             </Router>
         </div>

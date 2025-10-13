@@ -50,7 +50,7 @@ const Bkash=()=>{
 
 return(
     <div className="payment">
-    <h1 className="heading1">Payment Page</h1>
+    <h1 className="heading1">Bkash Payment </h1>
         <div className="inputs">
             <input
             type="text"
