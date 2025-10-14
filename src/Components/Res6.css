@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #fff9fb;
+}
+
+/* Container */
+.res6_container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fff6f9, #ffeaf3, #fff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+
+/* Heading */
+.res6_heading {
+    color: #ff6fa9;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 45px;
+    text-shadow: 1px 2px 4px rgba(255, 111, 169, 0.2);
+    letter-spacing: 1px;
+}
+
+/* Grid Layout */
+.dessert-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    width: 90%;
+    max-width: 1300px;
+}
+
+/* Dessert Cards */
+.d1,
+.d2,
+.d3 {
+    background-color: #fff;
+    border-radius: 22px;
+    box-shadow: 0 6px 18px rgba(255, 182, 193, 0.25);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.d1:hover,
+.d2:hover,
+.d3:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(255, 150, 170, 0.35);
+}
+
+/* Images */
+.d1_pic,
+.d2_pic,
+.d3_pic {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+/* Dessert Names */
+.b_name,
+.d2_name,
+.d3_name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #ff69b4;
+    margin: 10px 0 8px;
+}
+
+/* Descriptions */
+.d1_des,
+.d2_des,
+.d3_des {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Controls */
+.d1_controls,
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+.increase-btn,
+.decrease {
+    background: linear-gradient(90deg, #ff7eb3, #ff4588);
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.25s ease;
+}
+
+.increase-btn:hover,
+.decrease:hover {
+    transform: scale(1.07);
+    box-shadow: 0 6px 16px rgba(255, 105, 180, 0.4);
+}
+
+/* Amount + Price */
+.d1_controls p,
+.controls p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #444;
+    margin: 0 6px;
+}
+
+.Price,
+.faludaPrice,
+.icecreamPrice {
+    font-weight: 600;
+    color: #555;
+}
+
+/* Cart Section */
+.cart {
+    margin-top: 55px;
+    text-align: center;
+}
+
+.cart-btn {
+    background: linear-gradient(90deg, #ff7eb3, #ff4081);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cart-btn:hover {
+    background: linear-gradient(90deg, #ff4081, #ff1e63);
+    box-shadow: 0 6px 20px rgba(255, 64, 129, 0.4);
+    transform: translateY(-3px);
+}
+
+/* Responsive Layout */
+@media (max-width: 900px) {
+    .dessert-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .dessert-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .res6_heading {
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #fffbea;
+}
+
+/* Container */
+.res4_container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #fffdf5, #fff0c9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+
+/* Heading */
+.res4_heading {
+    color: #ff9800;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Grid Layout */
+.lunch-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    width: 90%;
+    max-width: 1300px;
+}
+
+/* Each card */
+.lunch1,
+.lunch2,
+.lunch3 {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(255, 152, 0, 0.15);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.lunch1:hover,
+.lunch2:hover,
+.lunch3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 152, 0, 0.25);
+}
+
+/* Images */
+.lunch1_pic,
+.lunch2_pic,
+.lunch3_pic {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    height: 220px;
+}
+
+/* Food names */
+.b_name,
+.lunch2_name,
+.lunch3_name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin: 15px 0;
+}
+
+/* Description */
+.lunch1_des,
+.lunch2_des,
+.lunch3_des {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Controls */
+.lunch1_controls,
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+.increase-btn,
+.decrease {
+    background-color: #ff9800;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.1s ease;
+}
+
+.increase-btn:hover,
+.decrease:hover {
+    background-color: #fb8c00;
+    transform: scale(1.05);
+}
+
+/* Amount text */
+.lunch1_controls p,
+.controls p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 6px;
+}
+
+/* Price text */
+.Price,
+.specialPrice,
+.chingriPrice {
+    font-weight: 600;
+    color: #444;
+    margin-left: 10px;
+}
+
+/* Cart Section */
+.cart {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.cart-btn {
+    background: linear-gradient(90deg, #ff9800, #fb8c00);
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cart-btn:hover {
+    background: linear-gradient(90deg, #fb8c00, #f57c00);
+    box-shadow: 0 6px 18px rgba(255, 152, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Responsive for Mobile */
+@media (max-width: 900px) {
+    .lunch-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .lunch-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .res4_heading {
+        font-size: 28px;
+    }
+}

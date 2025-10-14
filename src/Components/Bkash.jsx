@@ -38,7 +38,7 @@ const Bkash=()=>{
                     }
                     else{
                         alert("Payment Confirmed of tk "+totalPrice);
-                        navigate('/restaurants');
+                        navigate('/restaurants',{replace : true});
                     }
                 }
             }
