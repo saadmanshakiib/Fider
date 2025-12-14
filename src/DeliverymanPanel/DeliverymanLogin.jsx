@@ -16,13 +16,14 @@ const DeliverymanLogin = () => {
             const response = await fetch('http://localhost:1234/deliverymanlogin',{
                 method: 'POST',
                 headers: {'Content-type': 'application/json'},
+                credentials: 'include',
                 body: JSON.stringify({
                     phone: phoneref.current.value,
                     password: passRef.current.value
                 })
             });
             if(response.ok){
-                navigate('/mainpage');
+                navigate('/deliverymandashboard');
             }
             else{
                 alert("Error Finding Account");
@@ -36,7 +37,7 @@ const DeliverymanLogin = () => {
 
     /////////////////////sign up for new user///////////////
     const handleNewUser=()=>{
-        navigate('/DeliverymanSignUp');
+        navigate('/deliverymansignup');
     }
 ///////////////////////////////////////////////////
 
@@ -60,7 +61,7 @@ const DeliverymanLogin = () => {
                 >Login</button>
 
                 <h3 className='newUser'>Doesnt Have Any Account?</h3>
-                <button onClick={handleNewUser}>Create New Account</button>
+                <button onClick={handleNewUser}>Join Our Community As A Deliveryman </button>
             </div>
         </div>
     )

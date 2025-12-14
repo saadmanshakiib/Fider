@@ -1,4 +1,4 @@
-import { useRef} from "react";
+import {useRef, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import './Deliverymansignup.css'
 const DeliverymanSignUp=()=>{
@@ -12,24 +12,28 @@ const DeliverymanSignUp=()=>{
         e.preventDefault();
         const phoneCheck = phoneref.current.value.length === 11;
         const  passCheck = passref.current.value.length >=6;
-        const matchedPass = passref.current.value.length === confirmPassref.current.value;
+        const matchedPass = passref.current.value === confirmPassref.current.value;
+
             if(phoneCheck && matchedPass && passCheck){
-               // navigate("/deliverymanhome");
                     try{
-                        const resposne = await fetch('http://localhost:1234/deliverymanlogin',{
+                        const response = await fetch('http://localhost:1234/deliverymansignup',{
                             method : "POST",
-                            headers:{"content -type": "application/json"},
+                            credentials: "include",
+                            headers: { "Content-Type": "application/json" },
                             body : JSON.stringify({
                                 phone : phoneref.current.value,
                                 pass : passref.current.value,
-                                nameref : nameref.current.value,
+                                name : nameref.current.value,
                             })
                         })
-                        if(resposne.status === 200){
-                            navigate('/mainpage')
+
+                        const result = await response.text();
+                        if(response.status === 200){
+                            alert("Account Created Successfully");
+                            navigate('/deliverymandashboard');
                         }
-                        else{
-                        alert(resposne.message);
+                        else if(result.includes("Account Already Exists")){
+                        alert(result);
                         }
                     }
                     catch(error){

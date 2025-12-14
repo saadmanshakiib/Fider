@@ -9,31 +9,38 @@ const Login = () => {
     const passRef = useRef();
     const navigate = useNavigate();
 
-        const handleSubmit = async(e)=>{
-              e.preventDefault();
-               try{
-                   const response = await fetch('http://localhost:1234/login',{
-                       method: 'POST',
-                       headers: {'content-type': 'application/json'},
-                       body: JSON.stringify({
-                       email: emailRef.current.value,
-                       password: passRef.current.value
-                   })
-               });
-                   if(response.status === 200){
-                        navigate('/mainpage');
-                   }
-                   else{
-                       alert("Error Finding Account");
-                       return;
-                   }
-               }
-               catch(error){
-                   console.log(error);
-               }
-              
-        }
+        const handleSubmit = async(e)=> {
+            e.preventDefault();
+              if(emailRef.current.value === "admin" && passRef.current.value === "admin"){
+              navigate("/adminpage");
+              }
+              else{
+                  try{
+                      const response = await fetch('http://localhost:1234/login',{
+                          method: 'POST',
+                          headers: {'Content-type': 'application/json'},
+                          credentials: "include",
+                          body: JSON.stringify({
+                              email: emailRef.current.value,
+                              password: passRef.current.value
+                          })
+                      });
+                      if(response.status === 200){
+                          navigate('/restaurants');
+                      }
+                      else{
+                          alert("Error Finding Account");
+                          return;
+                      }
+                  }
+                  catch(error){
+                      console.log(error);
+                  }
 
+              }
+              }
+
+       // }
         const handleNewUser=()=>{
                 navigate('/SignUp');
         }
@@ -65,4 +72,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Login;

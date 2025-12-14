@@ -1,6 +1,9 @@
 import React from 'react'
 import './Hero.css'
+import {useNavigate} from "react-router-dom";
 const Hero = () => {
+const navigate = useNavigate();
+
   return (
     <div>
       <div className='des'>
@@ -25,6 +28,15 @@ With Fider, you can explore a wide variety of cuisines — from spicy street foo
 Whether it’s lunch at work, dinner at home, or a midnight snack craving, Fider makes food delivery effortless and enjoyable.        
         </p>
     </div>
+
+
+          {/*</div>*/}
+          <div className='login-btn-dm'>
+              <button className="dm-login-btn"
+              onClick={() => {navigate('/DeliveryMan_login')}}>
+              Delivery Man Login</button>
+              <button className="user-login-btn" onClick={()=>navigate("/login")}>User Login</button>
+          </div>
       </div>
     </div>
   )

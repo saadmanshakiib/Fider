@@ -38,6 +38,16 @@ const Bkash=()=>{
                     }
                     else{
                         alert("Payment Confirmed of tk "+totalPrice);
+                        await fetch(`http://localhost:1234/saveorder`, {
+                            method : "POST",
+                            credentials : "include",
+                            headers : {"content-type" : "application/json"},
+                            body: JSON.stringify({
+                                // restaurantId : location.state?.restaurantId || 1,
+                                totalPrice: totalPrice
+                            })
+
+                        })
                         navigate('/restaurants',{replace : true});
                     }
                 }

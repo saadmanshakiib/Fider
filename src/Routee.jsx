@@ -16,13 +16,23 @@ import Res6 from "./Components/Res6.jsx";
 import Bkash from "./Components/Bkash.jsx";
 import Choose from "./Components/Choose.jsx";
 import Nagad from "./Components/Nagad.jsx";
+import DeliverymanSignUp from "./DeliverymanPanel/DeliverymanSignUp.jsx";
+import DeliverymanLogin from "./DeliverymanPanel/DeliverymanLogin.jsx";
+import DeliverymanDashboard from "./DeliverymanPanel/DeliverymanDashboard.jsx";
+import Profile from "./Components/Profile.jsx";
+import AdminPage from "./AdminPanel/AdminPage.jsx";
+import AllRestaurant from "./AdminPanel/AllRestaurant.jsx";
+import AddRestaurant from "./AdminPanel/AddRestaurant.jsx";
+import DeleteRestaurant from "./AdminPanel/DeleteRestaurant.jsx";
+import AddDeliveryman from "./AdminPanel/AddDeliveryman.jsx";
+import RemoveDeliveryman from "./AdminPanel/RemoveDeliveryman.jsx";
 
 const Routee=()=>{
     return(
         <div>
             <Router>
                 <Routes>
-                    <Route path="/mainpage"
+                    <Route path="/"
                            element={
                         <>
                             <Header/>
@@ -34,10 +44,9 @@ const Routee=()=>{
 
                     <Route path="/about" element={<About/>}/>
                     <Route path="/report" element={<Report/>}/>
-                    <Route path='/' element={<Login/>}/>
+                    <Route path='/login' element={<Login/>}/>
                     <Route path='/signup' element={<SignUp/>}/>
                     <Route path="/restaurants" element={<Restaurants/>}/>
-
                     <Route path="/Res1" element={<Res1/>}/>
                     <Route path="/Res2" element={<Res2/>}/>
                     <Route path="/Res3" element={<Res3/>}/>
@@ -47,6 +56,16 @@ const Routee=()=>{
                     <Route path="/choose" element={<Choose/>}/>
                     <Route path="/bkash" element={<Bkash/>}/>
                     <Route path="/nagad" element={<Nagad/>}/>
+                    <Route path="/deliverymansignup" element={<DeliverymanSignUp/>}/>
+                    <Route path="/DeliveryMan_login" element={<DeliverymanLogin/>}/>
+                    <Route path="/deliverymandashboard" element={<DeliverymanDashboard/>}/>
+                    <Route path="/profile" element={<Profile/>}/>
+                    <Route path="/adminpage" element={<AdminPage/>}/>
+                    <Route path="/addrestaurant" element={<AddRestaurant/>}/>
+                    <Route path="/deleterestaurant" element={<DeleteRestaurant/>}/>
+                    <Route path="/allrestaurants" element={<AllRestaurant/>}/>
+                    <Route path="/adddeliveryman" element={<AddDeliveryman/>}/>
+                    <Route path="/removedeliveryman" element={<RemoveDeliveryman/>}/>
 
 
 

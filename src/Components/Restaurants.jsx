@@ -1,8 +1,10 @@
 import React from 'react'
-    import './Restaurants.css'
+import './Restaurants.css'
 import {useNavigate} from "react-router-dom";
 function Restaurants() {
+
     const navigate = useNavigate();
+
   return (
     <div className="all_res">
         <h1>Find Restaurants Here</h1>
@@ -58,6 +60,9 @@ function Restaurants() {
             <p>Rating 4.4/5.00</p>
             <button className="btn6" onClick={()=>{navigate('/Res6')}}>Check</button>
         </div>
+
+        <button className='profile-btn' onClick={()=>{navigate('/profile')}}>Profile</button>
+
 
     </div>
   )
