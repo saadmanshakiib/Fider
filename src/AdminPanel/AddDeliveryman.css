@@ -1,0 +1,50 @@
+.add-deliveryman {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;     /* center vertically */
+    background: #f4f4f4;
+}
+
+.add-deliveryman-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    width: 350px;
+}
+
+.add-deliveryman-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-deliveryman-inputs input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+}
+
+.add-deliveryman-inputs input:focus {
+    border-color: #ff6b6b;
+}
+
+.addDeliverymanButton {
+    padding: 12px;
+    background-color: #ff6b6b;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.addDeliverymanButton:hover {
+    background-color: #005fcc;
+}
